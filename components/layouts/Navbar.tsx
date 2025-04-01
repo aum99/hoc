@@ -11,11 +11,11 @@ function Navbar() {
     <div className="border-b">
       <Container>
         <div className="flex items-center justify-between px-4 sm:px-6 h-16">
-          <Link href="/" className="text-sm font-bold">
+          <Link href="/" className="text-2xl font-bold">
             HOUSE OF CGI
           </Link>
           <MainNav />
-          <Button className="hidden lg:block cursor-pointer">
+          <Button size="lg" className="text-xl hidden lg:block cursor-pointer">
             LETS CONNECT
           </Button>
           <MobileNav />

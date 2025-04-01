@@ -13,14 +13,19 @@ const MainNav = () => {
       active: pathname === "/about-us",
     },
     {
+      href: "/services",
+      label: "SERVICES",
+      active: pathname === "/services",
+    },
+    {
       href: "/gallery",
       label: "GALLERY",
       active: pathname === "/gallery",
     },
     {
-      href: "/services",
-      label: "SERVICES",
-      active: pathname === "/services",
+      href: "/crew",
+      label: "CREW",
+      active: pathname === "/crew",
     },
   ];
 
@@ -30,7 +35,7 @@ const MainNav = () => {
         <Link
           key={route.href}
           href={route.href}
-          className="text-sm font-medium"
+          className="text-xl font-medium"
         >
           {route.label}
         </Link>

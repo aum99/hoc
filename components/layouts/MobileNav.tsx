@@ -5,14 +5,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { Menu } from "lucide-react";
 
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/Sheet";
-import { Separator } from "@/components/ui/Separator";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/Sheet";
 
 const MobileNav = () => {
   const pathname = usePathname();
@@ -24,14 +17,14 @@ const MobileNav = () => {
       active: pathname === "/about-us",
     },
     {
-      href: "/gallery",
-      label: "GALLERY",
-      active: pathname === "/gallery",
-    },
-    {
       href: "/services",
       label: "SERVICES",
       active: pathname === "/services",
+    },
+    {
+      href: "/crew",
+      label: "CREW",
+      active: pathname === "/crew",
     },
     {
       href: "/connect",
@@ -43,16 +36,10 @@ const MobileNav = () => {
     <div className="flex sm:block lg:hidden">
       <Sheet open={isOpen} onOpenChange={setIsOpen}>
         <SheetTrigger asChild>
-          <Menu />
+          <Menu size={34} />
         </SheetTrigger>
         <SheetContent>
-          <SheetHeader>
-            <SheetTitle className="text-sm text-bold mt-2">
-              SOME TEXT NEEDED
-            </SheetTitle>
-          </SheetHeader>
-          <Separator />
-          <div className="grid py-2 mt-2 gap-7 pl-4 text-sm text-medium">
+          <div className="grid justify-items-center py-2 mt-30 gap-10 pl-4 text-2xl text-medium">
             {routes.map((route) => (
               <Link key={route.href} href={route.href}>
                 {route.label}
